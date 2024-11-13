@@ -5,7 +5,7 @@ import { useState } from 'react'
 import secureLocalStorage from 'react-secure-storage'
 import {UserIcon, KeyIcon} from '@heroicons/react/outline'
 
-function NavBar({showSalesData}) {
+function NavBar({showSalesData, showScenariosPage}) {
     const [UserInfo, setUsersInfo] = useState()
     let decryptedData = secureLocalStorage.getItem('sessionInfo') // get encrypted user data 
 
@@ -37,7 +37,7 @@ function NavBar({showSalesData}) {
             <a className='font-serif text-lg font-bold text-orange-600 cursor-pointer hover:no-underline hover:text-orange-600'>Main</a>
         </Link>
         <Link href='/' className=''>
-            <a className='font-serif text-lg font-bold no-underline cursor-pointer text-violet-700 hover:text-gray-700'>Scenarios</a>
+            <a onClick={(e)=>{e.preventDefault, showScenariosPage()}} className='font-serif text-lg font-bold no-underline cursor-pointer text-violet-700 hover:text-gray-700'>Scenarios</a>
         </Link>
         <Link href='/' className=''>
             <a onClick={(e)=>{e.preventDefault, showSalesData()}} className='font-serif text-lg font-bold no-underline cursor-pointer text-violet-700 hover:text-gray-700'>Sales Data</a>

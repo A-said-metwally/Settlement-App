@@ -3,7 +3,7 @@ import React from 'react';
 const SelectScenarioForm = ({ShowScenarios, selectScenario, scenariosList}) => {
     return (
     <div className='container w-full h-full  absolute z-20 top-1/2 left-1/2
-        -translate-x-[50%] -translate-y-[50%] bg-gradient-to-tr from-violet-700 via-sky-200 to-violet-500 overflow-auto no-scrollbar'>
+        -translate-x-[50%] -translate-y-[50%] gradient-style overflow-auto no-scrollbar'>
         <div className='relative flex items-center justify-center w-full h-full m-0 animate-fadeInScale '>
           <div className='absolute p-2 text-xl text-white border-white rounded-md cursor-pointer top-5 right-4 border-1 '
            onClick={()=>ShowScenarios()}

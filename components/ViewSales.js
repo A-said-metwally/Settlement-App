@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ViewSales = ({UploadedSalesData, showSales}) => {
+const ViewSales = ({UploadedSalesData, hideSales}) => {
 
     const styleOne = `pt-5 pb-4 group-hover:text-gray-600 text-gray-600 font-semibold text-xl`
 
@@ -11,7 +11,7 @@ const ViewSales = ({UploadedSalesData, showSales}) => {
         -translate-x-[50%] -translate-y-[50%] bg-gradient-to-tr from-violet-700 via-sky-200 to-violet-500 overflow-auto no-scrollbar'>
             <div className='relative flex justify-center w-full h-full m-0 animate-fadeInScale '>
                 <div className='absolute p-2 text-xl text-white border-white rounded-md cursor-pointer top-5 right-4 border-1 '
-                onClick={()=>showSales()}
+                onClick={()=>hideSales()}
                 >X</div>
 
                 <table className="table mt-[100px]">

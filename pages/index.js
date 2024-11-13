@@ -18,6 +18,7 @@ import Comments from '../components/Comments'
 import DisplayScenario from '../components/DisplayScenario'
 import IntroSection from '../components/IntroSection'
 import ViewSales from '../components/ViewSales'
+import ViewScenarios from '../components/ViewScenarios'
 
 
 function Index() {
@@ -299,8 +300,12 @@ const displayScenario = (e)=>{
     setDisplayCustomerScenarios(true)
 }
 
-  const [ShowSales, setShowSales] = useState(false)
-  const showSalesData = ()=>setShowSales(true)
+const [ShowSales, setShowSales] = useState(false)
+const showSalesData = ()=>setShowSales(true)
+
+
+const [ShowScenariosPage, setShowScenariosPage] = useState(false)
+const showScenariosPage = ()=>setShowScenariosPage(true)
 
   const [ComponentsLoading, setComponentsLoading] = useState(1)
   useEffect(()=>{
@@ -310,11 +315,11 @@ const displayScenario = (e)=>{
   },[])
 
   return (
-    <div id='main_page' className='relative min-w-full min-h-full m-0 bg-gradient-to-tr from-violet-700 via-sky-200 to-violet-500'>
-          <Header title={''}/>
+    <div id='main_page' className='relative min-w-full min-h-full m-0 gradient-style'>
+    <Header title={''}/>
           {ComponentsLoading === 1 && <IntroSection />}
           
-          {ComponentsLoading >= 2 && <NavBar showSalesData = {showSalesData}/>}
+          {ComponentsLoading >= 2 && <NavBar showSalesData = {showSalesData} showScenariosPage = {showScenariosPage}/>}
         
           {ComponentsLoading >= 2 && <Controles
            handleUpload = {handleUpload} 
@@ -336,16 +341,15 @@ const displayScenario = (e)=>{
             custsWithoutConditions = {custsWithoutConditions}
           />}
           
-          {ComponentsLoading >= 2 && MyScenario.length > 0 && 
-            <ResultTable allResults = {allResults} displayScenario = {displayScenario}/>}
+          {ComponentsLoading >= 2 && MyScenario.length > 0 && <ResultTable allResults = {allResults} displayScenario = {displayScenario}/>}
 
           {ComponentsLoading >= 2 && DisplayCustomerScenarios &&  <DisplayScenario 
             CurrentScenario = {CurrentScenario} 
             hideScenario = {()=>setDisplayCustomerScenarios(false)}/>}
 
-          {ShowSales && <ViewSales
-            UploadedSalesData = {UploadedSalesData}
-            showSales = {()=>{setShowSales(false)}}/>}
+          {ShowSales && <ViewSales UploadedSalesData = {UploadedSalesData} hideSales = {()=>{setShowSales(false)}}/>}
+
+          {ShowScenariosPage && <ViewScenarios AllScenarios = {AllScenarios} hideScenariosPage = {()=>setShowScenariosPage(false)}/>}
 
 
     </div>

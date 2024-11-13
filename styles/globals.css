@@ -133,3 +133,12 @@ html{
     -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
     scrollbar-width: none;     /* Hide scrollbar in Firefox */
   }
+
+  .gradient-style{
+    background : linear-gradient( 
+    to top right,
+    #6b21a8, /* violet-700 */
+    #bae6fd, /* sky-200 */
+    #a855f7  /* violet-500 */
+  )
+  }
