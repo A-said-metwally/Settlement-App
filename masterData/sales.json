@@ -1,0 +1,106 @@
+[
+     {
+      "Cust_id": 100,
+      "Customer": "carfour",
+      "item": "x",
+      "item_group": "fresh",
+      "sales_qty": 100,
+      "sales_amount":1000
+     },
+     {
+      "Cust_id": 100,
+      "Customer": "carfour",
+      "item": "x",
+      "item_group": "fresh",
+      "sales_qty": 500,
+      "sales_amount":900
+     },
+     {
+      "Cust_id": 100,
+      "Customer": "carfour",
+      "item": "y",
+      "item_group": "fpp",
+      "sales_qty": 300,
+      "sales_amount":1100
+     },
+     {
+      "Cust_id": 100,
+      "Customer": "carfour",
+      "item": "z",
+      "item_group": "fpp",
+      "sales_qty": 200,
+      "sales_amount":1200
+     },
+     {
+      "Cust_id": 100,
+      "Customer": "carfour",
+      "item": "b",
+      "item_group": "frozen",
+      "sales_qty": 400,
+      "sales_amount":2000
+     },
+     {
+      "Cust_id": 200,
+      "Customer": "panda",
+      "item": "x",
+      "item_group": "fresh",
+      "sales_qty": 600,
+      "sales_amount":1500
+     },
+     {
+      "Cust_id": 200,
+      "Customer": "panda",
+      "item": "z",
+      "item_group": "fpp",
+      "sales_qty": 300,
+      "sales_amount":3000
+     },
+     {
+      "Cust_id": 300,
+      "Customer": "al otheem",
+      "item": "x",
+      "item_group": "fresh",
+      "sales_qty": 200,
+      "sales_amount":4200
+     },
+     {
+      "Cust_id": 300,
+      "Customer": "al otheem",
+      "item": "x",
+      "item_group": "fresh",
+      "sales_qty": 500,
+      "sales_amount":3000
+     },
+     {
+      "Cust_id": 300,
+      "Customer": "al otheem",
+      "item": "y",
+      "item_group": "fpp",
+      "sales_qty": 300,
+      "sales_amount":2000
+     },
+     {
+      "Cust_id": 300,
+      "Customer": "al otheem",
+      "item": "z",
+      "item_group": "fpp",
+      "sales_qty": 400,
+      "sales_amount":1500
+     },
+     {
+      "Cust_id": 300,
+      "Customer": "al otheem",
+      "item": "b",
+      "item_group": "frozen",
+      "sales_qty": 500,
+      "sales_amount":1600
+     },
+     {
+      "Cust_id": 400,
+      "Customer": "nesto",
+      "item": "b",
+      "item_group": "frozen",
+      "sales_qty": 600,
+      "sales_amount":1300
+     }
+    ]

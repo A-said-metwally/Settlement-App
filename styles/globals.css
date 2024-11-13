@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+       body{
+         /* @apply bg-gray-100 text-gray-600 !important  */
+       } 
+}
+
+@layer components{
+}
+/* chrome://flags/#smooth-scrolling  */
+p{
+    margin-bottom: 0 !important;
+}
+body{
+    /* scroll-behavior: smooth !important;
+    -webkit-scroll-behavior: smooth !important */
+    height: 100% !important;
+    margin: 0 !important;
+    
+}
+html{
+    height: 100% !important;
+    width: 100%;
+    margin: 0 !important;
+}
+
+*,html {
+    scroll-behavior: smooth !important;
+    -webkit-scroll-behavior: smooth !important;
+    
+}
+.navbar {
+    background: none !important;
+    width: 100%;
+}
+.nav-link{
+    color: #5a5d61 !important;
+}
+.nav-link:hover{
+    color:orangered !important;
+    font-weight: 500;
+}
+
+.navbar-nav .active{
+    color:#108a00 !important
+}
+.overlay{
+    background: rgba(0,0,0,0.6);
+}
+
+
+.card{
+    border:none !important
+}
+.dropdown-toggle::after{display: none !important;}
+
+
+.carousel-item{
+    /* transition: transform 5s ease-in-out; */
+}
+
+.animate-scale{
+    transform: scale(1);
+    animation: scale-up 4s ease-in-out infinite
+}
+
+@keyframes scale-up {
+    0% { transform: scale(1);}
+    25% {transform: scale(1.02);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1.10);}
+}
+
+.steps-list{
+    list-style:auto !important;
+}
+
+#__next{
+    height: 100%;
+    margin: 0;
+}
+
+#app{
+    height: 100%;
+    margin: 0;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  /* Typewriter animation */
+  @keyframes typewriter {
+    from { border-right-color: rgba(0, 0, 0, 0.5); }
+    to { border-right-color: transparent; }
+  }
+  
+  .animate-typewriter {
+    width: 80%; /* Set width */
+    overflow-wrap: break-word; /* Ensures word wraps to the next line */
+    white-space: normal; /* Allows text wrapping */
+    animation: typewriter 0.2s steps(40) infinite;
+  }
+  
+  @keyframes blinkCursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+
+  /* global.css */
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;     /* Hide scrollbar in Firefox */
+  }
